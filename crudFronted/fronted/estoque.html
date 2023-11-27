@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <span>Estoque</span>
+      <button onclick="openModal()" id="new">Incluir</button>
+    </div>
+
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>produto</th>
+            <th>quantidade</th>
+            <th>valor_entrada</th>
+            <th>valor_saida</th>
+            <th>lucro_previsto</th>
+            <th>fornecedor</th>
+            <th class="acao">Editar</th>
+            <th class="acao">Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="modal-container">
+      <div class="modal">
+        <form>
+          <label for="id_produto">produto</label>
+          <select id="id_produto" required>
+            <option value="">- Selecione um produto- </option>
+          </select>
+          
+          <label for="quantidade">quantidade</label>
+          <input id="quantidade" type="text" required />
+          
+          <label for="valor_entrada">valor_entrada</label>
+          <input id="valor_entrada" type="text" required />
+
+          <label for="valor_saida">valor_saida</label>
+          <input id="valor_saida" type="text" required />
+
+          <label for="id_fornecedor">id_fornecedor</label>
+          <select id="id_fornecedor" required>
+            <option value="">- Selecione um fornecedor- </option>
+          </select>
+
+  
+          <button id="btnSalvar">Salvar</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <script src="../js/jquery.js"></script>
+  <script src="../js/estoque.js"></script>
+</body>
+
+</html>

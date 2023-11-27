@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <span>contato</span>
+      <button onclick="openModal()" id="new">Incluir</button>
+    </div>
+
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>cliente</th>
+            <th>cep</th>
+            <th>bairro</th>
+            <th>rua</th>
+            <th>numero_endereco</th>
+            <th>celular</th>
+            <th>telefone_fixo</th>
+            <th>telefone_contato</th>
+            <th>email</th>
+
+            <th class="acao">Editar</th>
+            <th class="acao">Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="modal-container">
+      <div class="modal">
+        <form>
+          <label for="id_cliente">nome</label>
+          <select id="id_cliente" required>
+          <option value="">- Selecione um nome- </option>
+          </select>
+
+          <label for="celular">celular</label>
+          <input id="celular" type="text" required />
+          
+          <label for="email">email</label>
+          <input id="email" type="text" required />
+          
+          <label for="telefone_contato">telefone_contato</label>
+          <input id="telefone_contato" type="text" required />
+
+          
+          <label for="telefone_fixo">telefone_fixo</label>
+          <input id="telefone_fixo" type="text" required />
+          
+          
+
+          <button id="btnSalvar">Salvar</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <script src="../js/jquery.js"></script>
+  <script src="../js/contato.js"></script>
+</body>
+
+</html>
